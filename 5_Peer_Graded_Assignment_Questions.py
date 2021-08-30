@@ -26,9 +26,7 @@ airline_data =  pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.
 year_list = [i for i in range(2005, 2021, 1)]
 
 """Compute graph data for creating yearly airline performance report 
-
 Function that takes airline data as input and create 5 dataframes based on the grouping condition to be used for plottling charts and grphs.
-
 Argument:
      
     df: Filtered dataframe
@@ -51,9 +49,7 @@ def compute_data_choice_1(df):
 
 
 """Compute graph data for creating yearly airline delay report
-
 This function takes in airline data and selected year as an input and performs computation for creating charts and plots.
-
 Arguments:
     df: Input airline data.
     
@@ -91,7 +87,7 @@ app.layout = html.Div(children=[
                                         ),
                                         # TASK2: Add a dropdown
                                         # Enter your code below. Make sure you have correct formatting.
-                                        dcc.Dropdown(id='input-year', 
+                                        dcc.Dropdown(id='input-type', 
                                                      # Update dropdown values using list comphrehension
                                                      options=[
                                                              {'label':'Yearly Airline Performance Report', 'value':'OPT1'},
@@ -167,7 +163,7 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
             
             # TASK5: Average flight time by reporting airline
             # Enter your code below. Make sure you have correct formatting.
-            line_fig = px.line(line_data,x='Month', y='AirTime', color='CancellationCode', title='Average monthly flight time (minutes) by airline' )
+            line_fig = px.line(line_data,x='Month', y='AirTime', color='Reporting_Airline', title='Average monthly flight time (minutes) by airline' )
             
             # Percentage of diverted airport landings per reporting airline
             pie_fig = px.pie(div_data, values='Flights', names='Reporting_Airline', title='% of flights by reporting airline')
