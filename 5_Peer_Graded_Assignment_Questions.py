@@ -93,7 +93,7 @@ app.layout = html.Div(children=[
                                                              {'label':'Yearly Airline Performance Report', 'value':'OPT1'},
                                                              {'label':'Yearly Airline Delay Report', 'value':'OPT2'}
                                                              ],
-                                                     placeholder="Select a report type",
+                                                     placeholder='Select a report type',
                                                      style={'width':'80%', 'padding':'3px', 'font-size': '20px', 'text-align-last' : 'center'}), 
                                             # Place them next to each other using the division style
                                             ], style={'display':'flex'}),
@@ -129,10 +129,9 @@ app.layout = html.Div(children=[
                                 html.Div([
                                         html.Div([ ], id='plot4'),
                                         html.Div([ ], id='plot5')
-                                ], style={'display': 'flex'}),
-                               
-                                ])
-
+                                ], style={'display': 'flex'})
+                                
+				])
 # Callback function definition
 # TASK4: Add 5 ouput components
 # Enter your code below. Make sure you have correct formatting.
